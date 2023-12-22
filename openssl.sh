@@ -1,17 +1,19 @@
 #!/bin/bash
- 
+
+yum update
+yum install -y wget tar make gcc perl pcre-devel zlib-devel
+
 wget https://codeload.github.com/openssl/openssl/tar.gz/OpenSSL_1_1_1h
- 
-yum install -y gcc make  perl
- 
+
+#yum install -y gcc make  perl
+
 tar zxvf OpenSSL_1_1_1h.tar.gz
- 
+
 cd openssl-OpenSSL_1_1_1h
 ./config --prefix=/usr/local/openssl
 make
 make install
- 
- 
+
 mv /usr/bin/openssl /usr/bin/openssl.old
 mv /usr/lib64/openssl /usr/lib64/openssl.old
 mv /usr/lib64/libssl.so /usr/lib64/libssl.so.old
