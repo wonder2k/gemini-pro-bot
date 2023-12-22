@@ -8,10 +8,10 @@ wget --no-check-certificate https://www.openssl.org/source/openssl-1.1.1w.tar.gz
 #yum install -y gcc make  perl
 
 ls
-tar zxvf OpenSSL_1_1_1w.tar.gz
+tar zxvf openssl-1.1.1w.tar.gz
 ls
 
-cd openssl-OpenSSL_1_1_1w
+cd openssl-openSSL_1_1_1w
 ./config --prefix=/usr/local/openssl
 make
 make install
