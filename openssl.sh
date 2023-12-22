@@ -18,3 +18,7 @@ export LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib64
 echo "export LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib64" >> ~/.bashrc
 
 openssl version
+
+./configure --enable-shared  --with-openssl=/etc/ssl
+make
+make install
