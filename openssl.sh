@@ -3,15 +3,15 @@
 yum update
 yum install -y wget tar make gcc perl pcre-devel zlib-devel
 
-wget https://codeload.github.com/openssl/openssl/tar.gz/OpenSSL_1_1_1h
+wget --no-check-certificate https://www.openssl.org/source/openssl-1.1.1w.tar.gz
 
 #yum install -y gcc make  perl
 
 ls
-tar zxvf OpenSSL_1_1_1h.tar.gz
+tar zxvf OpenSSL_1_1_1w.tar.gz
 ls
 
-cd openssl-OpenSSL_1_1_1h
+cd openssl-OpenSSL_1_1_1w
 ./config --prefix=/usr/local/openssl
 make
 make install
