@@ -25,7 +25,7 @@ yum -y install bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-dev
 wget https://www.python.org/ftp/python/3.9.8/Python-3.9.8.tgz
 tar -zxvf Python-3.9.8.tgz
 cd Python-3.9.8
-./configure --prefix=/usr/local/python3 --enable-shared --with-openssl=/usr/local/openssl
+./configure --prefix=/usr/local/python3 --enable-shared  --with-openssl=/usr/bin/openssl
 make && make install
 
 openssl version
