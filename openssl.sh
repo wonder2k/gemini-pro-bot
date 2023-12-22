@@ -10,16 +10,11 @@ wget --no-check-certificate https://www.openssl.org/source/openssl-1.1.1w.tar.gz
 tar zxvf openssl-1.1.1w.tar.gz
 
 cd openssl-1.1.1w
-./config --prefix=/usr/local/openssl
+./config --prefix=/usr --openssldir=/etc/ssl --libdir=lib no-shared zlib-dynamic
 make
 make install
 
-mv /usr/bin/openssl /usr/bin/openssl.old
-mv /usr/lib64/openssl /usr/lib64/openssl.old
-mv /usr/lib64/libssl.so /usr/lib64/libssl.so.old
-ln -s /usr/local/openssl/bin/openssl /usr/bin/openssl
-ln -s /usr/local/openssl/include/openssl /usr/include/openssl
-ln -s /usr/local/openssl/lib/libssl.so /usr/lib64/libssl.so
-echo "/usr/local/openssl/lib" >> /etc/ld.so.conf
-ldconfig -v
+export LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib64
+echo "export LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib64" >> ~/.bashrc
+
 openssl version
