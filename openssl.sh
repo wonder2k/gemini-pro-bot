@@ -7,7 +7,9 @@ wget https://codeload.github.com/openssl/openssl/tar.gz/OpenSSL_1_1_1h
 
 #yum install -y gcc make  perl
 
-tar zxvf OpenSSL_1_1_1h.tar
+ls
+tar zxvf OpenSSL_1_1_1h.tar.gz
+ls
 
 cd openssl-OpenSSL_1_1_1h
 ./config --prefix=/usr/local/openssl
