@@ -8,5 +8,5 @@ load_dotenv()
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 
-model = genai.GenerativeModel("gemini-pro")
-img_model = genai.GenerativeModel("gemini-pro-vision")
+model = genai.GenerativeModel("gemini-1.5-pro-latest")
+img_model = genai.GenerativeModel("gemini-1.5-pro-latest")
